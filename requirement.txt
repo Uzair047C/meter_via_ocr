@@ -1,0 +1,9 @@
+numpy==1.26.4
+paddlepaddle==2.6.2
+paddleocr>=2.7.0.0
+Pillow>=8.0.0
+opencv-python==4.10.0.84
+PyYAML>=5.4.0
+scikit-image==0.22.0
+flask==3.0.3
+flask-cors==6.0.5

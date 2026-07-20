@@ -1,0 +1,16 @@
+# PaddleOCR Configuration with Custom Trained Model
+ocr:
+  lang: 'en'
+  use_angle_cls: false
+  det_model: null  # Default model
+  rec_model: 'models/digit_only_rec'  # Custom trained recognition model (folder with inference.* files)
+  cls_model: null  # Default model
+
+paths:
+  models: 'models/'
+  dataset: 'dataset/'
+  output: 'output/'
+
+processing:
+  batch_size: 1
+  confidence_threshold: 0.5
