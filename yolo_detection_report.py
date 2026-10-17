@@ -517,50 +517,8 @@ def main():
     }
 
     # ---- unlabelled inference on ds -------------------------------------------
-    if args.infer_dir.is_dir():
-        infer_images = list_images(args.infer_dir)
-        print(f"\nInference on unlabelled folder: {args.infer_dir}")
-        print(f"  images: {len(infer_images)}")
-        pred_results = model.predict(
-            source=[str(p) for p in infer_images],
-            conf=args.conf, iou=args.nms_iou, imgsz=args.imgsz,
-            verbose=False, stream=True,
-        )
-        detected = 0
-        total_boxes = 0
-        confs = []
-        rows = []
-        anno_dir = OUT_DIR / "annotated"
-        if args.annotate:
-            anno_dir.mkdir(parents=True, exist_ok=True)
-        for img_path, res in zip(infer_images, pred_results):
-            c = res.boxes.conf.cpu().numpy()
-            detected += int(len(c) > 0)
-            total_boxes += len(c)
-            confs.extend(c.tolist())
-            rows.append({"image": img_path.name, "pred_boxes": len(c),
-                         "max_conf": float(c.max()) if len(c) else "",
-                         "mean_conf": float(c.mean()) if len(c) else ""})
-            if args.annotate:
-                res.save(str(anno_dir / img_path.name))
-        print(f"  images with >=1 detection: {detected} / {len(infer_images)}")
-        print(f"  predicted boxes           : {total_boxes}")
-        if confs:
-            print(f"  confidence                : mean={np.mean(confs):.4f}  "
-                  f"min={np.min(confs):.4f}  max={np.max(confs):.4f}")
-        with open(OUT_DIR / "yolo_infer_predictions.csv", "w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
-            w.writeheader()
-            w.writerows(rows)
-        summary["unlabelled_inference"] = {
-            "folder": str(args.infer_dir),
-            "images": len(infer_images),
-            "images_detected": detected,
-            "predicted_boxes": total_boxes,
-            "note": "no ground-truth boxes available; detection counts only",
-        }
-        if args.annotate:
-            print(f"  annotated images          : {anno_dir}")
+    if args.infer_dir.resolve() != images_dir.resolve():
+        run_inference(model, args, summary)
 
     with open(OUT_DIR / "yolo_metrics_summary.json", "w") as fh:
         json.dump(summary, fh, indent=2)
