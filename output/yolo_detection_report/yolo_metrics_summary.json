@@ -1,0 +1,51 @@
+{
+  "model": "A:\\ResearchPaper\\app\\meter_via_ocr\\models\\best.pt",
+  "evaluation_split": "A:\\ResearchPaper\\app\\meter_via_ocr\\ds",
+  "images": 212,
+  "gt_boxes": 0,
+  "thresholds": {
+    "confidence": 0.25,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "imgsz": 640
+  },
+  "box_level": {
+    "tp": 0,
+    "fp": 223,
+    "fn": 0
+  },
+  "image_level": {
+    "tp": 0,
+    "fn": 0,
+    "fp": 210,
+    "tn": 2
+  },
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "mAP50": 0.0,
+  "mAP50_95": 0.0,
+  "ap_per_iou": {
+    "0.50": 0.0,
+    "0.55": 0.0,
+    "0.60": 0.0,
+    "0.65": 0.0,
+    "0.70": 0.0,
+    "0.75": 0.0,
+    "0.80": 0.0,
+    "0.85": 0.0,
+    "0.90": 0.0,
+    "0.95": 0.0
+  },
+  "best_f1": 0.0,
+  "best_f1_confidence": 0.8287445902824402,
+  "best_f1_precision": 0.0,
+  "best_f1_recall": 0.0,
+  "unlabelled_inference": {
+    "folder": "A:\\ResearchPaper\\app\\meter_via_ocr\\ds\\images",
+    "images": 212,
+    "images_detected": 210,
+    "predicted_boxes": 223,
+    "note": "no ground-truth boxes available; detection counts only"
+  }
+}
