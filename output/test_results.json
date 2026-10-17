@@ -1,0 +1,1799 @@
+{
+  "summary": {
+    "total_images": 212,
+    "exact_matches": 200,
+    "exact_match_accuracy": 0.9433962264150944,
+    "average_confidence": 0.9229735805178588
+  },
+  "confusion_matrix": {
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        331,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        90,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        108,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        91,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        72,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        82,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        61,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        73,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        72,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        64
+      ]
+    ],
+    "normalized": [
+      [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      [
+        0.0,
+        0.9969879518072289,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0030120481927710845
+      ],
+      [
+        0.0,
+        0.01098901098901099,
+        0.989010989010989,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9891304347826086,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.010869565217391304,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.011904761904761904,
+        0.0,
+        0.0,
+        0.0,
+        0.9761904761904762,
+        0.0,
+        0.0,
+        0.0,
+        0.011904761904761904
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.013333333333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.013333333333333334,
+        0.0,
+        0.9733333333333334,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.013333333333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.013333333333333334,
+        0.0,
+        0.96,
+        0.013333333333333334
+      ],
+      [
+        0.014285714285714285,
+        0.014285714285714285,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02857142857142857,
+        0.0,
+        0.0,
+        0.02857142857142857,
+        0.9142857142857143
+      ]
+    ],
+    "labels": [
+      " ",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ]
+  },
+  "detailed_results": [
+    {
+      "filename": "000196.png",
+      "ground_truth": "05871",
+      "prediction": "05871",
+      "confidence": 0.956072211265564,
+      "correct": true
+    },
+    {
+      "filename": "000197.png",
+      "ground_truth": "00009",
+      "prediction": "0009",
+      "confidence": 0.9720301032066345,
+      "correct": false
+    },
+    {
+      "filename": "000198.png",
+      "ground_truth": "00871",
+      "prediction": "00871",
+      "confidence": 0.8844330906867981,
+      "correct": true
+    },
+    {
+      "filename": "000199.png",
+      "ground_truth": "00336",
+      "prediction": "00336",
+      "confidence": 0.9760880470275879,
+      "correct": true
+    },
+    {
+      "filename": "0642_04481372763crop_0.png",
+      "ground_truth": "00003",
+      "prediction": "00003",
+      "confidence": 0.9979885816574097,
+      "correct": true
+    },
+    {
+      "filename": "0642_04481372763_crop_0.png",
+      "ground_truth": "00003",
+      "prediction": "00003",
+      "confidence": 0.9063107371330261,
+      "correct": true
+    },
+    {
+      "filename": "0642_05279311822crop_0.png",
+      "ground_truth": "00000",
+      "prediction": "00000",
+      "confidence": 0.9926106333732605,
+      "correct": true
+    },
+    {
+      "filename": "0642_05279311822_crop_0.png",
+      "ground_truth": "00000",
+      "prediction": "00000",
+      "confidence": 0.9168027639389038,
+      "correct": true
+    },
+    {
+      "filename": "0642_06408310008crop_0.png",
+      "ground_truth": "03085",
+      "prediction": "03005",
+      "confidence": 0.9719842672348022,
+      "correct": false
+    },
+    {
+      "filename": "0642_06408310008_crop_0.png",
+      "ground_truth": "03085",
+      "prediction": "03085",
+      "confidence": 0.949373722076416,
+      "correct": true
+    },
+    {
+      "filename": "0642_08907642410crop_0.png",
+      "ground_truth": "00095",
+      "prediction": "00095",
+      "confidence": 0.9141912460327148,
+      "correct": true
+    },
+    {
+      "filename": "0642_08907642410_crop_0.png",
+      "ground_truth": "00095",
+      "prediction": "00095",
+      "confidence": 0.9802638292312622,
+      "correct": true
+    },
+    {
+      "filename": "0642_09208310004crop_0.png",
+      "ground_truth": "00017",
+      "prediction": "00015",
+      "confidence": 0.7964054346084595,
+      "correct": false
+    },
+    {
+      "filename": "0642_09296171839crop_0.png",
+      "ground_truth": "00026",
+      "prediction": "00026",
+      "confidence": 0.9932675361633301,
+      "correct": true
+    },
+    {
+      "filename": "0642_09296171839_crop_0.png",
+      "ground_truth": "00026",
+      "prediction": "00026",
+      "confidence": 0.931801974773407,
+      "correct": true
+    },
+    {
+      "filename": "0642_09540472231crop_0.png",
+      "ground_truth": "00019",
+      "prediction": "00019",
+      "confidence": 0.9971561431884766,
+      "correct": true
+    },
+    {
+      "filename": "0642_09540472231_crop_0.png",
+      "ground_truth": "00019",
+      "prediction": "00019",
+      "confidence": 0.922286331653595,
+      "correct": true
+    },
+    {
+      "filename": "0642_09681427069crop_0.png",
+      "ground_truth": "00008",
+      "prediction": "00008",
+      "confidence": 0.968744158744812,
+      "correct": true
+    },
+    {
+      "filename": "0642_09681427069_crop_0.png",
+      "ground_truth": "00008",
+      "prediction": "00008",
+      "confidence": 0.9910310506820679,
+      "correct": true
+    },
+    {
+      "filename": "0642_09987557973crop_0.png",
+      "ground_truth": "00010",
+      "prediction": "00010",
+      "confidence": 0.9964170455932617,
+      "correct": true
+    },
+    {
+      "filename": "0642_09987557973_crop_0.png",
+      "ground_truth": "00010",
+      "prediction": "00010",
+      "confidence": 0.9965980648994446,
+      "correct": true
+    },
+    {
+      "filename": "0642_10208310002crop_0.png",
+      "ground_truth": "00002",
+      "prediction": "00002",
+      "confidence": 0.9899042248725891,
+      "correct": true
+    },
+    {
+      "filename": "0642_10208310002_crop_0.png",
+      "ground_truth": "00002",
+      "prediction": "00002",
+      "confidence": 0.9919154047966003,
+      "correct": true
+    },
+    {
+      "filename": "0642_10216468990_crop_0.png",
+      "ground_truth": "00008",
+      "prediction": "00008",
+      "confidence": 0.8662806749343872,
+      "correct": true
+    },
+    {
+      "filename": "0642_10385058598crop_0.png",
+      "ground_truth": "00006",
+      "prediction": "00006",
+      "confidence": 0.9949721097946167,
+      "correct": true
+    },
+    {
+      "filename": "0642_10385058598_crop_0.png",
+      "ground_truth": "00006",
+      "prediction": "00006",
+      "confidence": 0.9916915893554688,
+      "correct": true
+    },
+    {
+      "filename": "0642_10983245712crop_0.png",
+      "ground_truth": "00027",
+      "prediction": "00027",
+      "confidence": 0.9647132754325867,
+      "correct": true
+    },
+    {
+      "filename": "0642_10983245712_crop_0.png",
+      "ground_truth": "00027",
+      "prediction": "00027",
+      "confidence": 0.9688698053359985,
+      "correct": true
+    },
+    {
+      "filename": "0642_11514835633crop_0.png",
+      "ground_truth": "00007",
+      "prediction": "00007",
+      "confidence": 0.9876090884208679,
+      "correct": true
+    },
+    {
+      "filename": "0642_11514835633_crop_0.png",
+      "ground_truth": "00007",
+      "prediction": "00007",
+      "confidence": 0.9576637148857117,
+      "correct": true
+    },
+    {
+      "filename": "0642_11608310006crop_0.png",
+      "ground_truth": "00162",
+      "prediction": "00162",
+      "confidence": 0.9615368843078613,
+      "correct": true
+    },
+    {
+      "filename": "0642_11608310006_crop_0.png",
+      "ground_truth": "00162",
+      "prediction": "00162",
+      "confidence": 0.9350600242614746,
+      "correct": true
+    },
+    {
+      "filename": "0642_12433557928crop_0.png",
+      "ground_truth": "02032",
+      "prediction": "02032",
+      "confidence": 0.965196967124939,
+      "correct": true
+    },
+    {
+      "filename": "0642_12433557928_crop_0.png",
+      "ground_truth": "02032",
+      "prediction": "02032",
+      "confidence": 0.9220598340034485,
+      "correct": true
+    },
+    {
+      "filename": "0642_12497310008crop_0.png",
+      "ground_truth": "00005",
+      "prediction": "00005",
+      "confidence": 0.9839475750923157,
+      "correct": true
+    },
+    {
+      "filename": "0642_12497310008_crop_0.png",
+      "ground_truth": "00005",
+      "prediction": "00005",
+      "confidence": 0.9955412149429321,
+      "correct": true
+    },
+    {
+      "filename": "0642_13508310003_crop_0.png",
+      "ground_truth": "00010",
+      "prediction": "00010",
+      "confidence": 0.9962692260742188,
+      "correct": true
+    },
+    {
+      "filename": "4120512274_0.png",
+      "ground_truth": "01396",
+      "prediction": "01396",
+      "confidence": 0.978690505027771,
+      "correct": true
+    },
+    {
+      "filename": "4617420007_0.png",
+      "ground_truth": "02068",
+      "prediction": "02068",
+      "confidence": 0.9480741620063782,
+      "correct": true
+    },
+    {
+      "filename": "4658420007_0.png",
+      "ground_truth": "00850",
+      "prediction": "00850",
+      "confidence": 0.9832439422607422,
+      "correct": true
+    },
+    {
+      "filename": "4859700009_0.png",
+      "ground_truth": "01382",
+      "prediction": "01382",
+      "confidence": 0.9644274711608887,
+      "correct": true
+    },
+    {
+      "filename": "4927420002_0.png",
+      "ground_truth": "03082",
+      "prediction": "03082",
+      "confidence": 0.8173538446426392,
+      "correct": true
+    },
+    {
+      "filename": "5111594825_0.png",
+      "ground_truth": "01322",
+      "prediction": "01322",
+      "confidence": 0.9483095407485962,
+      "correct": true
+    },
+    {
+      "filename": "5293420005_0.png",
+      "ground_truth": "00186",
+      "prediction": "00186",
+      "confidence": 0.980105996131897,
+      "correct": true
+    },
+    {
+      "filename": "5347420001_0.png",
+      "ground_truth": "01492",
+      "prediction": "01492",
+      "confidence": 0.9394029378890991,
+      "correct": true
+    },
+    {
+      "filename": "5704420008_0.png",
+      "ground_truth": "02426",
+      "prediction": "02426",
+      "confidence": 0.9529901742935181,
+      "correct": true
+    },
+    {
+      "filename": "74378703248_crop_0.png",
+      "ground_truth": "47497",
+      "prediction": "47497",
+      "confidence": 0.8464156985282898,
+      "correct": true
+    },
+    {
+      "filename": "74460590297_crop_0.png",
+      "ground_truth": "02922",
+      "prediction": "02922",
+      "confidence": 0.982951819896698,
+      "correct": true
+    },
+    {
+      "filename": "74507910003_crop_0.png",
+      "ground_truth": "03738",
+      "prediction": "03738",
+      "confidence": 0.8691331744194031,
+      "correct": true
+    },
+    {
+      "filename": "74508091670_crop_0.png",
+      "ground_truth": "16694",
+      "prediction": "16694",
+      "confidence": 0.8812934756278992,
+      "correct": true
+    },
+    {
+      "filename": "74519610005_crop_0.png",
+      "ground_truth": "03325",
+      "prediction": "03321",
+      "confidence": 0.8917219042778015,
+      "correct": false
+    },
+    {
+      "filename": "74584225242_crop_0.png",
+      "ground_truth": "04274",
+      "prediction": "04274",
+      "confidence": 0.9200345873832703,
+      "correct": true
+    },
+    {
+      "filename": "74683849983_crop_0.png",
+      "ground_truth": "02187",
+      "prediction": "02187",
+      "confidence": 0.808268666267395,
+      "correct": true
+    },
+    {
+      "filename": "74703100003_crop_0.png",
+      "ground_truth": "14095",
+      "prediction": "14095",
+      "confidence": 0.9384276270866394,
+      "correct": true
+    },
+    {
+      "filename": "74760298393_crop_0.png",
+      "ground_truth": "00000",
+      "prediction": "00000",
+      "confidence": 0.9976180195808411,
+      "correct": true
+    },
+    {
+      "filename": "75008220008_crop_0.png",
+      "ground_truth": "01112",
+      "prediction": "01112",
+      "confidence": 0.9716728329658508,
+      "correct": true
+    },
+    {
+      "filename": "75128711654_crop_0.png",
+      "ground_truth": "62705",
+      "prediction": "62705",
+      "confidence": 0.8853081464767456,
+      "correct": true
+    },
+    {
+      "filename": "75161710001_crop_0.png",
+      "ground_truth": "14232",
+      "prediction": "14232",
+      "confidence": 0.9268869161605835,
+      "correct": true
+    },
+    {
+      "filename": "75230801377_crop_0.png",
+      "ground_truth": "18106",
+      "prediction": "18106",
+      "confidence": 0.877318263053894,
+      "correct": true
+    },
+    {
+      "filename": "75281926511_crop_0.png",
+      "ground_truth": "08987",
+      "prediction": "08987",
+      "confidence": 0.8478767275810242,
+      "correct": true
+    },
+    {
+      "filename": "75420512131_crop_0.png",
+      "ground_truth": "06851",
+      "prediction": "06851",
+      "confidence": 0.9603091478347778,
+      "correct": true
+    },
+    {
+      "filename": "75424546796_crop_0.png",
+      "ground_truth": "08895",
+      "prediction": "08895",
+      "confidence": 0.9566279649734497,
+      "correct": true
+    },
+    {
+      "filename": "75451124699_crop_0.png",
+      "ground_truth": "00739",
+      "prediction": "00739",
+      "confidence": 0.9871188402175903,
+      "correct": true
+    },
+    {
+      "filename": "75549263020_crop_0.png",
+      "ground_truth": "05999",
+      "prediction": "05559",
+      "confidence": 0.9120097160339355,
+      "correct": false
+    },
+    {
+      "filename": "75573511286_crop_0.png",
+      "ground_truth": "02849",
+      "prediction": "02849",
+      "confidence": 0.888224720954895,
+      "correct": true
+    },
+    {
+      "filename": "75586569347_crop_0.png",
+      "ground_truth": "25489",
+      "prediction": "25489",
+      "confidence": 0.9242098927497864,
+      "correct": true
+    },
+    {
+      "filename": "75654766569_crop_0.png",
+      "ground_truth": "01723",
+      "prediction": "01723",
+      "confidence": 0.9604911804199219,
+      "correct": true
+    },
+    {
+      "filename": "75857100004_crop_0.png",
+      "ground_truth": "00898",
+      "prediction": "00898",
+      "confidence": 0.8909128904342651,
+      "correct": true
+    },
+    {
+      "filename": "75933403877_crop_0.png",
+      "ground_truth": "09236",
+      "prediction": "09236",
+      "confidence": 0.9554131627082825,
+      "correct": true
+    },
+    {
+      "filename": "76256200007_crop_0.png",
+      "ground_truth": "01488",
+      "prediction": "01488",
+      "confidence": 0.9441197514533997,
+      "correct": true
+    },
+    {
+      "filename": "76329620009_crop_0.png",
+      "ground_truth": "06690",
+      "prediction": "06690",
+      "confidence": 0.9426193237304688,
+      "correct": true
+    },
+    {
+      "filename": "76469470363_crop_0.png",
+      "ground_truth": "43333",
+      "prediction": "43333",
+      "confidence": 0.9236292839050293,
+      "correct": true
+    },
+    {
+      "filename": "76685620007_crop_0.png",
+      "ground_truth": "01441",
+      "prediction": "01441",
+      "confidence": 0.8225016593933105,
+      "correct": true
+    },
+    {
+      "filename": "76780420006_crop_0.png",
+      "ground_truth": "05502",
+      "prediction": "05502",
+      "confidence": 0.8999137878417969,
+      "correct": true
+    },
+    {
+      "filename": "76947200002_crop_0.png",
+      "ground_truth": "02596",
+      "prediction": "02596",
+      "confidence": 0.9677384495735168,
+      "correct": true
+    },
+    {
+      "filename": "77105960106_crop_0.png",
+      "ground_truth": "07195",
+      "prediction": "07195",
+      "confidence": 0.8604868054389954,
+      "correct": true
+    },
+    {
+      "filename": "77214930008_crop_0.png",
+      "ground_truth": "03918",
+      "prediction": "03818",
+      "confidence": 0.801188588142395,
+      "correct": false
+    },
+    {
+      "filename": "77351920002_crop_0.png",
+      "ground_truth": "15527",
+      "prediction": "15527",
+      "confidence": 0.9128292202949524,
+      "correct": true
+    },
+    {
+      "filename": "77672304266_crop_0.png",
+      "ground_truth": "03428",
+      "prediction": "03428",
+      "confidence": 0.9107809066772461,
+      "correct": true
+    },
+    {
+      "filename": "77849110000_crop_0.png",
+      "ground_truth": "04529",
+      "prediction": "04529",
+      "confidence": 0.8677557110786438,
+      "correct": true
+    },
+    {
+      "filename": "77945861043_crop_0.png",
+      "ground_truth": "02762",
+      "prediction": "02762",
+      "confidence": 0.9478535652160645,
+      "correct": true
+    },
+    {
+      "filename": "78010383574_crop_0.png",
+      "ground_truth": "03419",
+      "prediction": "03419",
+      "confidence": 0.8644933700561523,
+      "correct": true
+    },
+    {
+      "filename": "78066496270_crop_0.png",
+      "ground_truth": "25985",
+      "prediction": "25985",
+      "confidence": 0.9143432378768921,
+      "correct": true
+    },
+    {
+      "filename": "78066496270_crop_1.png",
+      "ground_truth": "25985",
+      "prediction": "25985",
+      "confidence": 0.9091865420341492,
+      "correct": true
+    },
+    {
+      "filename": "78176770952_crop_0.png",
+      "ground_truth": "18709",
+      "prediction": "18709",
+      "confidence": 0.876134991645813,
+      "correct": true
+    },
+    {
+      "filename": "78462309887_crop_0.png",
+      "ground_truth": "07534",
+      "prediction": "07534",
+      "confidence": 0.9471638798713684,
+      "correct": true
+    },
+    {
+      "filename": "78646806436_crop_0.png",
+      "ground_truth": "04387",
+      "prediction": "04387",
+      "confidence": 0.9328097105026245,
+      "correct": true
+    },
+    {
+      "filename": "78695309837_crop_0.png",
+      "ground_truth": "01090",
+      "prediction": "01090",
+      "confidence": 0.9848461151123047,
+      "correct": true
+    },
+    {
+      "filename": "79181991963_crop_0.png",
+      "ground_truth": "02856",
+      "prediction": "02856",
+      "confidence": 0.934248149394989,
+      "correct": true
+    },
+    {
+      "filename": "79214150470_crop_0.png",
+      "ground_truth": "07410",
+      "prediction": "07410",
+      "confidence": 0.9193876385688782,
+      "correct": true
+    },
+    {
+      "filename": "79233010705_crop_0.png",
+      "ground_truth": "13266",
+      "prediction": "13266",
+      "confidence": 0.9646024703979492,
+      "correct": true
+    },
+    {
+      "filename": "79304677218_crop_0.png",
+      "ground_truth": "00032",
+      "prediction": "00032",
+      "confidence": 0.9931807518005371,
+      "correct": true
+    },
+    {
+      "filename": "79498760069_crop_0.png",
+      "ground_truth": "09835",
+      "prediction": "09989",
+      "confidence": 0.8117809295654297,
+      "correct": false
+    },
+    {
+      "filename": "79614620007_crop_0.png",
+      "ground_truth": "05097",
+      "prediction": "05097",
+      "confidence": 0.9728758931159973,
+      "correct": true
+    },
+    {
+      "filename": "79632240879_crop_0.png",
+      "ground_truth": "34051",
+      "prediction": "34051",
+      "confidence": 0.9142770767211914,
+      "correct": true
+    },
+    {
+      "filename": "79763298381_crop_0.png",
+      "ground_truth": "74826",
+      "prediction": "14826",
+      "confidence": 0.8658690452575684,
+      "correct": false
+    },
+    {
+      "filename": "79880666411_crop_0.png",
+      "ground_truth": "60755",
+      "prediction": "60755",
+      "confidence": 0.9602450132369995,
+      "correct": true
+    },
+    {
+      "filename": "80003330000_crop_0.png",
+      "ground_truth": "20205",
+      "prediction": "20205",
+      "confidence": 0.9503464698791504,
+      "correct": true
+    },
+    {
+      "filename": "80193579911_crop_0.png",
+      "ground_truth": "06470",
+      "prediction": "06470",
+      "confidence": 0.9203103184700012,
+      "correct": true
+    },
+    {
+      "filename": "80207334782_crop_0.png",
+      "ground_truth": "06402",
+      "prediction": "06402",
+      "confidence": 0.8738784790039062,
+      "correct": true
+    },
+    {
+      "filename": "80846130005_crop_0.png",
+      "ground_truth": "00255",
+      "prediction": "00255",
+      "confidence": 0.9661162495613098,
+      "correct": true
+    },
+    {
+      "filename": "80923933883_crop_0.png",
+      "ground_truth": "04247",
+      "prediction": "04247",
+      "confidence": 0.9084764719009399,
+      "correct": true
+    },
+    {
+      "filename": "80994239566_crop_0.png",
+      "ground_truth": "00584",
+      "prediction": "00584",
+      "confidence": 0.96601802110672,
+      "correct": true
+    },
+    {
+      "filename": "80994600007_crop_0.png",
+      "ground_truth": "00295",
+      "prediction": "00295",
+      "confidence": 0.9770241975784302,
+      "correct": true
+    },
+    {
+      "filename": "81153461454_crop_0.png",
+      "ground_truth": "02908",
+      "prediction": "02808",
+      "confidence": 0.7525844573974609,
+      "correct": false
+    },
+    {
+      "filename": "81276801917_crop_0.png",
+      "ground_truth": "08072",
+      "prediction": "08072",
+      "confidence": 0.9570226669311523,
+      "correct": true
+    },
+    {
+      "filename": "81362152779_crop_0.png",
+      "ground_truth": "01380",
+      "prediction": "01380",
+      "confidence": 0.9092122912406921,
+      "correct": true
+    },
+    {
+      "filename": "81446809394_crop_0.png",
+      "ground_truth": "05011",
+      "prediction": "05011",
+      "confidence": 0.9652730822563171,
+      "correct": true
+    },
+    {
+      "filename": "81468040001_crop_0.png",
+      "ground_truth": "31742",
+      "prediction": "31742",
+      "confidence": 0.878283679485321,
+      "correct": true
+    },
+    {
+      "filename": "81546021130_crop_0.png",
+      "ground_truth": "03723",
+      "prediction": "03723",
+      "confidence": 0.8941629528999329,
+      "correct": true
+    },
+    {
+      "filename": "81596735134_crop_0.png",
+      "ground_truth": "06959",
+      "prediction": "06959",
+      "confidence": 0.9742344617843628,
+      "correct": true
+    },
+    {
+      "filename": "81650651086_crop_0.png",
+      "ground_truth": "06467",
+      "prediction": "06467",
+      "confidence": 0.9589794874191284,
+      "correct": true
+    },
+    {
+      "filename": "82070002538_crop_0.png",
+      "ground_truth": "00797",
+      "prediction": "00797",
+      "confidence": 0.9295312762260437,
+      "correct": true
+    },
+    {
+      "filename": "82075848372_crop_0.png",
+      "ground_truth": "04924",
+      "prediction": "04924",
+      "confidence": 0.8438966870307922,
+      "correct": true
+    },
+    {
+      "filename": "82310531684_crop_0.png",
+      "ground_truth": "31345",
+      "prediction": "31345",
+      "confidence": 0.8916166424751282,
+      "correct": true
+    },
+    {
+      "filename": "82437410002_crop_0.png",
+      "ground_truth": "33857",
+      "prediction": "33857",
+      "confidence": 0.8901733160018921,
+      "correct": true
+    },
+    {
+      "filename": "82524880208_crop_0.png",
+      "ground_truth": "01058",
+      "prediction": "01058",
+      "confidence": 0.9631249308586121,
+      "correct": true
+    },
+    {
+      "filename": "82530153277_crop_0.png",
+      "ground_truth": "04207",
+      "prediction": "04207",
+      "confidence": 0.8766341209411621,
+      "correct": true
+    },
+    {
+      "filename": "82608300008_crop_0.png",
+      "ground_truth": "02904",
+      "prediction": "02904",
+      "confidence": 0.8741226196289062,
+      "correct": true
+    },
+    {
+      "filename": "82672273966_crop_0.png",
+      "ground_truth": "02540",
+      "prediction": "02540",
+      "confidence": 0.8492181897163391,
+      "correct": true
+    },
+    {
+      "filename": "82964403354_crop_0.png",
+      "ground_truth": "06572",
+      "prediction": "06572",
+      "confidence": 0.8658149838447571,
+      "correct": true
+    },
+    {
+      "filename": "83245601105_crop_0.png",
+      "ground_truth": "12935",
+      "prediction": "12935",
+      "confidence": 0.9260784387588501,
+      "correct": true
+    },
+    {
+      "filename": "83257672432_crop_0.png",
+      "ground_truth": "03025",
+      "prediction": "03025",
+      "confidence": 0.9634353518486023,
+      "correct": true
+    },
+    {
+      "filename": "83378620005_crop_0.png",
+      "ground_truth": "12299",
+      "prediction": "12299",
+      "confidence": 0.9601967930793762,
+      "correct": true
+    },
+    {
+      "filename": "83439532892_crop_0.png",
+      "ground_truth": "00698",
+      "prediction": "00698",
+      "confidence": 0.9216176271438599,
+      "correct": true
+    },
+    {
+      "filename": "83501247569_crop_0.png",
+      "ground_truth": "07827",
+      "prediction": "07827",
+      "confidence": 0.9535767436027527,
+      "correct": true
+    },
+    {
+      "filename": "83623218761_crop_0.png",
+      "ground_truth": "03200",
+      "prediction": "03200",
+      "confidence": 0.8302715420722961,
+      "correct": true
+    },
+    {
+      "filename": "83643755214_crop_0.png",
+      "ground_truth": "07268",
+      "prediction": "07268",
+      "confidence": 0.9337746500968933,
+      "correct": true
+    },
+    {
+      "filename": "83899115303_crop_0.png",
+      "ground_truth": "12194",
+      "prediction": "12194",
+      "confidence": 0.8775820732116699,
+      "correct": true
+    },
+    {
+      "filename": "84063649242_crop_0.png",
+      "ground_truth": "04453",
+      "prediction": "04453",
+      "confidence": 0.9203534126281738,
+      "correct": true
+    },
+    {
+      "filename": "84213020005_crop_0.png",
+      "ground_truth": "03331",
+      "prediction": "03331",
+      "confidence": 0.9509788751602173,
+      "correct": true
+    },
+    {
+      "filename": "84351082312_crop_0.png",
+      "ground_truth": "08638",
+      "prediction": "08638",
+      "confidence": 0.9485071301460266,
+      "correct": true
+    },
+    {
+      "filename": "84466715582_crop_0.png",
+      "ground_truth": "45003",
+      "prediction": "45003",
+      "confidence": 0.8429063558578491,
+      "correct": true
+    },
+    {
+      "filename": "84472115348_crop_0.png",
+      "ground_truth": "07777",
+      "prediction": "07777",
+      "confidence": 0.9669783711433411,
+      "correct": true
+    },
+    {
+      "filename": "84743600003_crop_0.png",
+      "ground_truth": "08633",
+      "prediction": "08633",
+      "confidence": 0.9217646718025208,
+      "correct": true
+    },
+    {
+      "filename": "84901046155_crop_0.png",
+      "ground_truth": "06135",
+      "prediction": "06135",
+      "confidence": 0.8924733996391296,
+      "correct": true
+    },
+    {
+      "filename": "84990191862_crop_0.png",
+      "ground_truth": "07131",
+      "prediction": "07131",
+      "confidence": 0.8990362882614136,
+      "correct": true
+    },
+    {
+      "filename": "85217485599_crop_0.png",
+      "ground_truth": "03397",
+      "prediction": "03397",
+      "confidence": 0.9341236352920532,
+      "correct": true
+    },
+    {
+      "filename": "85222296601_crop_0.png",
+      "ground_truth": "13983",
+      "prediction": "13983",
+      "confidence": 0.8745988607406616,
+      "correct": true
+    },
+    {
+      "filename": "85359030005_crop_0.png",
+      "ground_truth": "19403",
+      "prediction": "19403",
+      "confidence": 0.7981817126274109,
+      "correct": true
+    },
+    {
+      "filename": "86056972507_crop_0.png",
+      "ground_truth": "12401",
+      "prediction": "12401",
+      "confidence": 0.8325880765914917,
+      "correct": true
+    },
+    {
+      "filename": "86161792030_crop_0.png",
+      "ground_truth": "07495",
+      "prediction": "07495",
+      "confidence": 0.7961755990982056,
+      "correct": true
+    },
+    {
+      "filename": "86178002423_crop_0.png",
+      "ground_truth": "03285",
+      "prediction": "03285",
+      "confidence": 0.9206467866897583,
+      "correct": true
+    },
+    {
+      "filename": "86326593364_crop_0.png",
+      "ground_truth": "01881",
+      "prediction": "01881",
+      "confidence": 0.8836539387702942,
+      "correct": true
+    },
+    {
+      "filename": "86416746450_crop_0.png",
+      "ground_truth": "00214",
+      "prediction": "00214",
+      "confidence": 0.9827800989151001,
+      "correct": true
+    },
+    {
+      "filename": "86475694096_crop_0.png",
+      "ground_truth": "08846",
+      "prediction": "08846",
+      "confidence": 0.9710528254508972,
+      "correct": true
+    },
+    {
+      "filename": "86501600000_crop_0.png",
+      "ground_truth": "02932",
+      "prediction": "02932",
+      "confidence": 0.857189953327179,
+      "correct": true
+    },
+    {
+      "filename": "86705430121_crop_0.png",
+      "ground_truth": "02627",
+      "prediction": "02627",
+      "confidence": 0.8928877115249634,
+      "correct": true
+    },
+    {
+      "filename": "86943104397_crop_0.png",
+      "ground_truth": "01162",
+      "prediction": "01162",
+      "confidence": 0.9253596067428589,
+      "correct": true
+    },
+    {
+      "filename": "87007052795_crop_0.png",
+      "ground_truth": "01420",
+      "prediction": "01420",
+      "confidence": 0.9001948237419128,
+      "correct": true
+    },
+    {
+      "filename": "87291391875_crop_0.png",
+      "ground_truth": "04799",
+      "prediction": "04799",
+      "confidence": 0.9627987742424011,
+      "correct": true
+    },
+    {
+      "filename": "87371414969_crop_0.png",
+      "ground_truth": "08532",
+      "prediction": "08532",
+      "confidence": 0.9419977068901062,
+      "correct": true
+    },
+    {
+      "filename": "87419320004_crop_0.png",
+      "ground_truth": "08079",
+      "prediction": "08079",
+      "confidence": 0.9368975758552551,
+      "correct": true
+    },
+    {
+      "filename": "87498830006_crop_0.png",
+      "ground_truth": "85149",
+      "prediction": "85149",
+      "confidence": 0.9511726498603821,
+      "correct": true
+    },
+    {
+      "filename": "87555720009_crop_0.png",
+      "ground_truth": "21595",
+      "prediction": "21595",
+      "confidence": 0.8932873606681824,
+      "correct": true
+    },
+    {
+      "filename": "87795389219_crop_0.png",
+      "ground_truth": "03594",
+      "prediction": "03594",
+      "confidence": 0.9131971597671509,
+      "correct": true
+    },
+    {
+      "filename": "87797100002_crop_0.png",
+      "ground_truth": "01688",
+      "prediction": "01688",
+      "confidence": 0.9193459749221802,
+      "correct": true
+    },
+    {
+      "filename": "87833068643_crop_0.png",
+      "ground_truth": "14304",
+      "prediction": "14304",
+      "confidence": 0.8319471478462219,
+      "correct": true
+    },
+    {
+      "filename": "88083861794_crop_0.png",
+      "ground_truth": "13079",
+      "prediction": "13079",
+      "confidence": 0.9413795471191406,
+      "correct": true
+    },
+    {
+      "filename": "88361010882_crop_0.png",
+      "ground_truth": "09492",
+      "prediction": "09492",
+      "confidence": 0.871494472026825,
+      "correct": true
+    },
+    {
+      "filename": "88528577062_crop_0.png",
+      "ground_truth": "07087",
+      "prediction": "07087",
+      "confidence": 0.9389055967330933,
+      "correct": true
+    },
+    {
+      "filename": "88569081610_crop_0.png",
+      "ground_truth": "04702",
+      "prediction": "04702",
+      "confidence": 0.8610871434211731,
+      "correct": true
+    },
+    {
+      "filename": "88654567408_crop_0.png",
+      "ground_truth": "04087",
+      "prediction": "04087",
+      "confidence": 0.9398167729377747,
+      "correct": true
+    },
+    {
+      "filename": "88913990094_crop_0.png",
+      "ground_truth": "02355",
+      "prediction": "02355",
+      "confidence": 0.9386703372001648,
+      "correct": true
+    },
+    {
+      "filename": "88938678781_crop_0.png",
+      "ground_truth": "05906",
+      "prediction": "05006",
+      "confidence": 0.7923371195793152,
+      "correct": false
+    },
+    {
+      "filename": "88952578024_crop_0.png",
+      "ground_truth": "00186",
+      "prediction": "00186",
+      "confidence": 0.9774178266525269,
+      "correct": true
+    },
+    {
+      "filename": "89030724507_crop_0.png",
+      "ground_truth": "03454",
+      "prediction": "03454",
+      "confidence": 0.8785780072212219,
+      "correct": true
+    },
+    {
+      "filename": "89306213375_crop_0.png",
+      "ground_truth": "18172",
+      "prediction": "18172",
+      "confidence": 0.8181511163711548,
+      "correct": true
+    },
+    {
+      "filename": "89363567994_crop_0.png",
+      "ground_truth": "01849",
+      "prediction": "01849",
+      "confidence": 0.9582220315933228,
+      "correct": true
+    },
+    {
+      "filename": "89560838123_crop_0.png",
+      "ground_truth": "00612",
+      "prediction": "00612",
+      "confidence": 0.9803972244262695,
+      "correct": true
+    },
+    {
+      "filename": "89960353566_crop_0.png",
+      "ground_truth": "01550",
+      "prediction": "01550",
+      "confidence": 0.9592372179031372,
+      "correct": true
+    },
+    {
+      "filename": "89973274908_crop_0.png",
+      "ground_truth": "06867",
+      "prediction": "06867",
+      "confidence": 0.9542236328125,
+      "correct": true
+    },
+    {
+      "filename": "89995023887_crop_0.png",
+      "ground_truth": "46595",
+      "prediction": "46595",
+      "confidence": 0.8035939931869507,
+      "correct": true
+    },
+    {
+      "filename": "90048374707_crop_0.png",
+      "ground_truth": "04030",
+      "prediction": "04030",
+      "confidence": 0.9359537363052368,
+      "correct": true
+    },
+    {
+      "filename": "90110258283_crop_0.png",
+      "ground_truth": "04554",
+      "prediction": "04554",
+      "confidence": 0.9336288571357727,
+      "correct": true
+    },
+    {
+      "filename": "90140440851_crop_0.png",
+      "ground_truth": "06651",
+      "prediction": "06650",
+      "confidence": 0.8665794134140015,
+      "correct": false
+    },
+    {
+      "filename": "90200687268_crop_0.png",
+      "ground_truth": "11323",
+      "prediction": "11323",
+      "confidence": 0.9223831295967102,
+      "correct": true
+    },
+    {
+      "filename": "90342434751_crop_0.png",
+      "ground_truth": "23483",
+      "prediction": "23483",
+      "confidence": 0.8477543592453003,
+      "correct": true
+    },
+    {
+      "filename": "90564028752_crop_0.png",
+      "ground_truth": "25821",
+      "prediction": "25821",
+      "confidence": 0.9232478141784668,
+      "correct": true
+    },
+    {
+      "filename": "90789983344_crop_0.png",
+      "ground_truth": "05076",
+      "prediction": "05076",
+      "confidence": 0.9533447027206421,
+      "correct": true
+    },
+    {
+      "filename": "90908496673_crop_0.png",
+      "ground_truth": "64999",
+      "prediction": "64999",
+      "confidence": 0.9146804809570312,
+      "correct": true
+    },
+    {
+      "filename": "90960901875_crop_0.png",
+      "ground_truth": "07673",
+      "prediction": "07673",
+      "confidence": 0.9486662745475769,
+      "correct": true
+    },
+    {
+      "filename": "91356810001_crop_0.png",
+      "ground_truth": "81551",
+      "prediction": "81551",
+      "confidence": 0.9482086300849915,
+      "correct": true
+    },
+    {
+      "filename": "91535832785_crop_0.png",
+      "ground_truth": "12196",
+      "prediction": "12196",
+      "confidence": 0.9582598805427551,
+      "correct": true
+    },
+    {
+      "filename": "91592703143_crop_0.png",
+      "ground_truth": "01789",
+      "prediction": "01789",
+      "confidence": 0.9353682398796082,
+      "correct": true
+    },
+    {
+      "filename": "91713183779_crop_0.png",
+      "ground_truth": "04424",
+      "prediction": "04424",
+      "confidence": 0.8836773633956909,
+      "correct": true
+    },
+    {
+      "filename": "91895832953_crop_0.png",
+      "ground_truth": "02738",
+      "prediction": "02738",
+      "confidence": 0.9424147605895996,
+      "correct": true
+    },
+    {
+      "filename": "92001400008_crop_0.png",
+      "ground_truth": "00057",
+      "prediction": "00057",
+      "confidence": 0.9869440793991089,
+      "correct": true
+    },
+    {
+      "filename": "92001510004_crop_0.png",
+      "ground_truth": "22303",
+      "prediction": "22303",
+      "confidence": 0.8544416427612305,
+      "correct": true
+    },
+    {
+      "filename": "92208858354_crop_0.png",
+      "ground_truth": "03775",
+      "prediction": "03775",
+      "confidence": 0.9558048248291016,
+      "correct": true
+    },
+    {
+      "filename": "92425066070_crop_0.png",
+      "ground_truth": "03088",
+      "prediction": "03088",
+      "confidence": 0.9620262384414673,
+      "correct": true
+    },
+    {
+      "filename": "92691900002_crop_0.png",
+      "ground_truth": "10155",
+      "prediction": "10155",
+      "confidence": 0.969316840171814,
+      "correct": true
+    },
+    {
+      "filename": "92809431841_crop_0.png",
+      "ground_truth": "03006",
+      "prediction": "03006",
+      "confidence": 0.9702249765396118,
+      "correct": true
+    },
+    {
+      "filename": "92827320000_crop_0.png",
+      "ground_truth": "35604",
+      "prediction": "35604",
+      "confidence": 0.8655816316604614,
+      "correct": true
+    },
+    {
+      "filename": "92841110007_crop_0.png",
+      "ground_truth": "31602",
+      "prediction": "31602",
+      "confidence": 0.822009265422821,
+      "correct": true
+    },
+    {
+      "filename": "93005810002_crop_0.png",
+      "ground_truth": "05259",
+      "prediction": "05259",
+      "confidence": 0.9200539588928223,
+      "correct": true
+    },
+    {
+      "filename": "93039689513_crop_0.png",
+      "ground_truth": "20420",
+      "prediction": "20420",
+      "confidence": 0.870704174041748,
+      "correct": true
+    },
+    {
+      "filename": "93249083374_crop_0.png",
+      "ground_truth": "03372",
+      "prediction": "03372",
+      "confidence": 0.9247276186943054,
+      "correct": true
+    },
+    {
+      "filename": "93321124559_crop_0.png",
+      "ground_truth": "07077",
+      "prediction": "07077",
+      "confidence": 0.950619101524353,
+      "correct": true
+    },
+    {
+      "filename": "93567844431_crop_0.png",
+      "ground_truth": "07351",
+      "prediction": "07351",
+      "confidence": 0.9529471397399902,
+      "correct": true
+    },
+    {
+      "filename": "93708041145_crop_0.png",
+      "ground_truth": "14771",
+      "prediction": "14771",
+      "confidence": 0.9286338686943054,
+      "correct": true
+    },
+    {
+      "filename": "93728320008_crop_0.png",
+      "ground_truth": "53202",
+      "prediction": "53202",
+      "confidence": 0.8438578844070435,
+      "correct": true
+    },
+    {
+      "filename": "93766829449_crop_0.png",
+      "ground_truth": "04070",
+      "prediction": "04070",
+      "confidence": 0.951003909111023,
+      "correct": true
+    },
+    {
+      "filename": "93807610006_crop_0.png",
+      "ground_truth": "00313",
+      "prediction": "00313",
+      "confidence": 0.9726166725158691,
+      "correct": true
+    },
+    {
+      "filename": "93831733212_crop_0.png",
+      "ground_truth": "09623",
+      "prediction": "09623",
+      "confidence": 0.9134173393249512,
+      "correct": true
+    },
+    {
+      "filename": "93843142857_crop_0.png",
+      "ground_truth": "02688",
+      "prediction": "02688",
+      "confidence": 0.9395959973335266,
+      "correct": true
+    },
+    {
+      "filename": "93927982707_crop_0.png",
+      "ground_truth": "30040",
+      "prediction": "30040",
+      "confidence": 0.9673652648925781,
+      "correct": true
+    },
+    {
+      "filename": "94023320008_crop_0.png",
+      "ground_truth": "02685",
+      "prediction": "02685",
+      "confidence": 0.9291821718215942,
+      "correct": true
+    },
+    {
+      "filename": "94035910002_crop_0.png",
+      "ground_truth": "05822",
+      "prediction": "05622",
+      "confidence": 0.7491496801376343,
+      "correct": false
+    },
+    {
+      "filename": "94085900002_crop_0.png",
+      "ground_truth": "27561",
+      "prediction": "27561",
+      "confidence": 0.9221693873405457,
+      "correct": true
+    },
+    {
+      "filename": "94161553626_crop_0.png",
+      "ground_truth": "07316",
+      "prediction": "07316",
+      "confidence": 0.9557942152023315,
+      "correct": true
+    },
+    {
+      "filename": "94335963339_crop_0.png",
+      "ground_truth": "03934",
+      "prediction": "03934",
+      "confidence": 0.9540713429450989,
+      "correct": true
+    }
+  ]
+}
