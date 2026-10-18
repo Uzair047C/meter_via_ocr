@@ -1,8 +1,8 @@
 {
   "model": "A:\\ResearchPaper\\app\\meter_via_ocr\\models\\best.pt",
-  "evaluation_split": "A:\\ResearchPaper\\app\\meter_via_ocr\\ds",
+  "evaluation_split": "A:\\ResearchPaper\\app\\internship_computer_visions_engineering\\data_Set\\validation",
   "images": 212,
-  "gt_boxes": 0,
+  "gt_boxes": 212,
   "thresholds": {
     "confidence": 0.25,
     "match_iou": 0.5,
@@ -10,37 +10,37 @@
     "imgsz": 640
   },
   "box_level": {
-    "tp": 0,
-    "fp": 223,
-    "fn": 0
+    "tp": 211,
+    "fp": 15,
+    "fn": 1
   },
   "image_level": {
-    "tp": 0,
-    "fn": 0,
-    "fp": 210,
-    "tn": 2
+    "tp": 211,
+    "fn": 1,
+    "fp": 0,
+    "tn": 0
   },
-  "precision": 0.0,
-  "recall": 0.0,
-  "f1": 0.0,
-  "mAP50": 0.0,
-  "mAP50_95": 0.0,
+  "precision": 0.9336283185840708,
+  "recall": 0.9952830188679245,
+  "f1": 0.9634703196347032,
+  "mAP50": 0.9941522690131379,
+  "mAP50_95": 0.6178402922893795,
   "ap_per_iou": {
-    "0.50": 0.0,
-    "0.55": 0.0,
-    "0.60": 0.0,
-    "0.65": 0.0,
-    "0.70": 0.0,
-    "0.75": 0.0,
-    "0.80": 0.0,
-    "0.85": 0.0,
-    "0.90": 0.0,
-    "0.95": 0.0
+    "0.50": 0.9941522690131379,
+    "0.55": 0.9941032494052948,
+    "0.60": 0.9941032494052948,
+    "0.65": 0.9583695435136965,
+    "0.70": 0.8832497407122728,
+    "0.75": 0.7395256616523724,
+    "0.80": 0.4423092264615764,
+    "0.85": 0.1506505683509035,
+    "0.90": 0.020559416060889603,
+    "0.95": 0.001379998318356729
   },
-  "best_f1": 0.0,
-  "best_f1_confidence": 0.8287445902824402,
-  "best_f1_precision": 0.0,
-  "best_f1_recall": 0.0,
+  "best_f1": 0.9813084112149533,
+  "best_f1_confidence": 0.6065953969955444,
+  "best_f1_precision": 0.9722222222222222,
+  "best_f1_recall": 0.9905660377358491,
   "unlabelled_inference": {
     "folder": "A:\\ResearchPaper\\app\\meter_via_ocr\\ds\\images",
     "images": 212,

@@ -24,7 +24,6 @@ Usage (defaults reproduce the paper's detector evaluation):
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 from pathlib import Path
 
@@ -37,9 +36,12 @@ from ultralytics import YOLO
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_MODEL = ROOT / "models" / "best.pt"
-DEFAULT_IMAGES_DIR = ROOT / "ds" / "images"
+DEFAULT_INFER_DIR = ROOT / "ds" / "images"
 DEFAULT_LABELS_DIR = ROOT / "ds" / "labels"
-DEFAULT_INFER_DIR = DEFAULT_IMAGES_DIR
+# Only split in this workspace that actually ships YOLO bounding boxes:
+FALLBACK_METRIC_DIR = (
+    ROOT.parent / "internship_computer_visions_engineering" / "data_Set" / "validation"
+)
 OUT_DIR = ROOT / "output" / "yolo_detection_report"
 
 IMG_EXTS = ("*.jpg", "*.jpeg", "*.png", "*.bmp", "*.webp")
@@ -311,63 +313,14 @@ def plot_dashboard(records, fixed, fixed_iou, fixed_conf, sweep50, mAP50, mAP509
 
 
 # ------------------------------------------------------------------------ main
-def run_inference(model, args, summary):
-    """Detection counts + optional annotated overlays for an unlabelled folder."""
-    if not args.infer_dir.is_dir():
-        return
-    infer_images = list_images(args.infer_dir)
-    print(f"\nInference on unlabelled folder: {args.infer_dir}")
-    print(f"  images: {len(infer_images)}")
-    pred_results = model.predict(
-        source=[str(p) for p in infer_images],
-        conf=args.conf, iou=args.nms_iou, imgsz=args.imgsz,
-        verbose=False, stream=True,
-    )
-    detected = 0
-    total_boxes = 0
-    confs = []
-    rows = []
-    anno_dir = OUT_DIR / "annotated"
-    if args.annotate:
-        anno_dir.mkdir(parents=True, exist_ok=True)
-    for img_path, res in zip(infer_images, pred_results):
-        c = res.boxes.conf.cpu().numpy()
-        detected += int(len(c) > 0)
-        total_boxes += len(c)
-        confs.extend(c.tolist())
-        rows.append({"image": img_path.name, "pred_boxes": len(c),
-                     "max_conf": float(c.max()) if len(c) else "",
-                     "mean_conf": float(c.mean()) if len(c) else ""})
-        if args.annotate:
-            res.save(str(anno_dir / img_path.name))
-    print(f"  images with >=1 detection: {detected} / {len(infer_images)}")
-    print(f"  predicted boxes           : {total_boxes}")
-    if confs:
-        print(f"  confidence                : mean={np.mean(confs):.4f}  "
-              f"min={np.min(confs):.4f}  max={np.max(confs):.4f}")
-    with open(OUT_DIR / "yolo_infer_predictions.csv", "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
-        w.writeheader()
-        w.writerows(rows)
-    summary["unlabelled_inference"] = {
-        "folder": str(args.infer_dir),
-        "images": len(infer_images),
-        "images_detected": detected,
-        "predicted_boxes": total_boxes,
-        "note": "no ground-truth boxes available; detection counts only",
-    }
-    if args.annotate:
-        print(f"  annotated images          : {anno_dir}")
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--model", type=Path, default=DEFAULT_MODEL)
-    ap.add_argument("--images", type=Path, default=DEFAULT_IMAGES_DIR,
-                    help="labelled image folder for metrics (default: ds/images)")
-    ap.add_argument("--labels", type=Path, default=DEFAULT_LABELS_DIR,
-                    help="YOLO label folder matching --images (default: ds/labels)")
+    ap.add_argument("--images", type=Path, default=None,
+                    help="labelled image folder for metrics")
+    ap.add_argument("--labels", type=Path, default=None,
+                    help="YOLO label folder matching --images")
     ap.add_argument("--infer-dir", type=Path, default=DEFAULT_INFER_DIR,
                     help="unlabelled folder to run the detector on (default: ds/images)")
     ap.add_argument("--conf", type=float, default=0.25,
@@ -383,51 +336,30 @@ def main():
     if not args.model.exists():
         raise SystemExit(f"model not found: {args.model}")
 
-    # ---- metric split: always the requested images/labels ----------------------
+    # ---- pick the metric split -------------------------------------------------
     images_dir, labels_dir = args.images, args.labels
+    if images_dir is None or labels_dir is None:
+        if has_yolo_labels(DEFAULT_LABELS_DIR, DEFAULT_INFER_DIR):
+            images_dir = DEFAULT_INFER_DIR
+            labels_dir = DEFAULT_LABELS_DIR
+        else:
+            images_dir = FALLBACK_METRIC_DIR / "images"
+            labels_dir = FALLBACK_METRIC_DIR / "labels"
+            print("[NOTE] ds/labels contains no YOLO .txt boxes (OCR labels only).")
+            print(f"[NOTE] Detection metrics are therefore computed on the labelled split:")
+            print(f"       {images_dir.parent}")
+            print("[NOTE] Run inference on ds/images is reported separately below.\n")
     if not images_dir.is_dir():
         raise SystemExit(f"image folder not found: {images_dir}")
-    has_gt = has_yolo_labels(labels_dir, images_dir)
+    if not has_yolo_labels(labels_dir, images_dir):
+        raise SystemExit(f"no YOLO .txt labels for the images in {images_dir} "
+                         f"(label folder: {labels_dir})")
 
     metric_images = list_images(images_dir)
     if not metric_images:
         raise SystemExit(f"no images in: {images_dir}")
 
     model = YOLO(str(args.model))
-
-    # ---- no ground truth: detection counts only -------------------------------
-    if not has_gt:
-        print("=" * 66)
-        print("YOLO DETECTION RESULTS")
-        print("=" * 66)
-        print(f"model            : {args.model}")
-        print(f"evaluation split : {images_dir}")
-        print(f"images           : {len(metric_images)}")
-        print(f"GT labels        : none in {labels_dir}")
-        print("Precision/Recall/F1/mAP: n/a (no ground-truth boxes)")
-        print(f"thresholds       : conf >= {args.conf:.2f}, "
-              f"NMS IoU = {args.nms_iou:.2f}, imgsz = {args.imgsz}")
-        print("=" * 66)
-        OUT_DIR.mkdir(parents=True, exist_ok=True)
-        summary = {
-            "model": str(args.model),
-            "evaluation_split": str(images_dir),
-            "images": len(metric_images),
-            "gt_boxes": None,
-            "thresholds": {
-                "confidence": args.conf,
-                "match_iou": args.iou,
-                "nms_iou": args.nms_iou,
-                "imgsz": args.imgsz,
-            },
-            "metrics": "n/a - no YOLO ground-truth labels",
-        }
-        run_inference(model, args, summary)
-        with open(OUT_DIR / "yolo_metrics_summary.json", "w") as fh:
-            json.dump(summary, fh, indent=2)
-        print(f"\nSaved: {OUT_DIR / 'yolo_metrics_summary.json'}")
-        return
-
     records = collect(model, metric_images, labels_dir, args.imgsz, args.nms_iou)
 
     # ---- metrics ---------------------------------------------------------------
@@ -452,7 +384,7 @@ def main():
     print("YOLO DETECTION RESULTS")
     print("=" * 66)
     print(f"model            : {args.model}")
-    print(f"evaluation split : {images_dir}")
+    print(f"evaluation split : {images_dir.parent}")
     print(f"images           : {len(records)}")
     print(f"GT boxes         : {n_gt}")
     print(f"thresholds       : conf >= {args.conf:.2f}, "
@@ -493,7 +425,7 @@ def main():
 
     summary = {
         "model": str(args.model),
-        "evaluation_split": str(images_dir),
+        "evaluation_split": str(images_dir.parent),
         "images": len(records),
         "gt_boxes": n_gt,
         "thresholds": {
@@ -517,8 +449,50 @@ def main():
     }
 
     # ---- unlabelled inference on ds -------------------------------------------
-    if args.infer_dir.resolve() != images_dir.resolve():
-        run_inference(model, args, summary)
+    if args.infer_dir.is_dir():
+        infer_images = list_images(args.infer_dir)
+        print(f"\nInference on unlabelled folder: {args.infer_dir}")
+        print(f"  images: {len(infer_images)}")
+        pred_results = model.predict(
+            source=[str(p) for p in infer_images],
+            conf=args.conf, iou=args.nms_iou, imgsz=args.imgsz,
+            verbose=False, stream=True,
+        )
+        detected = 0
+        total_boxes = 0
+        confs = []
+        rows = []
+        anno_dir = OUT_DIR / "annotated"
+        if args.annotate:
+            anno_dir.mkdir(parents=True, exist_ok=True)
+        for img_path, res in zip(infer_images, pred_results):
+            c = res.boxes.conf.cpu().numpy()
+            detected += int(len(c) > 0)
+            total_boxes += len(c)
+            confs.extend(c.tolist())
+            rows.append({"image": img_path.name, "pred_boxes": len(c),
+                         "max_conf": float(c.max()) if len(c) else "",
+                         "mean_conf": float(c.mean()) if len(c) else ""})
+            if args.annotate:
+                res.save(str(anno_dir / img_path.name))
+        print(f"  images with >=1 detection: {detected} / {len(infer_images)}")
+        print(f"  predicted boxes           : {total_boxes}")
+        if confs:
+            print(f"  confidence                : mean={np.mean(confs):.4f}  "
+                  f"min={np.min(confs):.4f}  max={np.max(confs):.4f}")
+        with open(OUT_DIR / "yolo_infer_predictions.csv", "w", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+            w.writeheader()
+            w.writerows(rows)
+        summary["unlabelled_inference"] = {
+            "folder": str(args.infer_dir),
+            "images": len(infer_images),
+            "images_detected": detected,
+            "predicted_boxes": total_boxes,
+            "note": "no ground-truth boxes available; detection counts only",
+        }
+        if args.annotate:
+            print(f"  annotated images          : {anno_dir}")
 
     with open(OUT_DIR / "yolo_metrics_summary.json", "w") as fh:
         json.dump(summary, fh, indent=2)
